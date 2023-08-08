@@ -5,7 +5,7 @@ import 'package:video_player/video_player.dart';
 import 'package:video_players_demo/src/default_change_notifier.dart';
 
 final networkVideoPlayerProvider =
-    ChangeNotifierProvider.family<NetworkVideoPlayerViewModel, String>((ref, url) {
+    ChangeNotifierProvider.autoDispose.family<NetworkVideoPlayerViewModel, String>((ref, url) {
   ref.onDispose(() {
     print('Disposing video player provider');
   });
